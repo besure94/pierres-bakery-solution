@@ -17,11 +17,20 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void BreadConstructor_ReturnsLoaves_Int()
+    public void Bread_ReturnsLoaves_Int()
     {
       Bread newBread = new Bread(3);
       int result = newBread.Loaves;
       Assert.AreEqual(3, result);
+    }
+
+    [TestMethod]
+    public void Bread_SetsValueOfLoaves_Void()
+    {
+      Bread newBread = new Bread(3);
+      int newLoaves = 10;
+      newBread.Loaves = newLoaves;
+      Assert.AreEqual(newLoaves, newBread.Loaves);
     }
   }
 }
