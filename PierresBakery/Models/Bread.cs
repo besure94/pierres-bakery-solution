@@ -16,10 +16,7 @@ namespace PierresBakery.Models
     {
       int loafCost = 5;
       int orderTotal = 0;
-      Console.WriteLine(loafCost);
-      Console.WriteLine(orderTotal);
       int numberOfLoaves = Loaves;
-      Console.WriteLine(numberOfLoaves);
       for (int i = 1; i <= numberOfLoaves; i++)
       {
         if (i % 3 == 0)
