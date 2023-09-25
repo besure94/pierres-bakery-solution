@@ -5,5 +5,15 @@ using System;
 
 namespace PierresBakery.Tests
 {
+  [TestClass]
+  public class PastryTests
+  {
 
+    [TestMethod]
+    public void PastryConstructor_CreatesInstanceOfPastryConstructor_Pastry()
+    {
+      Pastry newPastry = new Pastry();
+      Assert.AreEqual(typeof(Pastry), newPastry.GetType());
+    }
+  }
 }
