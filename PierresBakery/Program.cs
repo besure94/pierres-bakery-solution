@@ -11,8 +11,8 @@ namespace PierresBakery
       Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
       Console.WriteLine("Welcome to Pierre's Bakery, home to the best bread and pastries in town!");
       Console.WriteLine("What can we do for you today?");
-      Console.WriteLine("A loaf of bread costs $5, and every 3rd loaf is free! For example, two loaves of bread would cost $10.");
-      Console.WriteLine("A pastry costs $2, and every 4th pastry is free! For example, two pastries would cost $4.");
+      Console.WriteLine("A single loaf of bread costs $5, and every 3rd loaf is free! For example, two loaves of bread would cost $10, three loaves would cost $10, and so on.");
+      Console.WriteLine("A single pastry costs $2, and every 4th pastry is free! For example, two pastries would cost $4, four pastries would cost $6, and so on.");
       Console.WriteLine("Please enter how many loaves of bread you would like to order:");
       string breadLoaves = Console.ReadLine();
       Console.WriteLine("Please enter how many pastries you would like to order:");
