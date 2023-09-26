@@ -17,11 +17,20 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void PastryConstructor_ReturnsNumberOfPastries_Int()
+    public void Pastry_ReturnsNumberOfPastries_Int()
     {
       Pastry newPastry = new Pastry(4);
-      int result = newPastry.Pastries;
+      int result = newPastry.Quantity;
       Assert.AreEqual(4, result);
+    }
+
+    [TestMethod]
+    public void Pastry_SetsValueOfPastries_Int()
+    {
+      Pastry newPastry = new Pastry(4);
+      int newQuantity = 8;
+      newPastry.Quantity = newQuantity;
+      Assert.AreEqual(newQuantity, newPastry.Quantity);
     }
   }
 }

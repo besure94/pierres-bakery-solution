@@ -20,7 +20,7 @@ namespace PierresBakery.Tests
     public void Bread_ReturnsLoaves_Int()
     {
       Bread newBread = new Bread(3);
-      int result = newBread.Loaves;
+      int result = newBread.Quantity;
       Assert.AreEqual(3, result);
     }
 
@@ -28,9 +28,9 @@ namespace PierresBakery.Tests
     public void Bread_SetsValueOfLoaves_Void()
     {
       Bread newBread = new Bread(3);
-      int newLoaves = 10;
-      newBread.Loaves = newLoaves;
-      Assert.AreEqual(newLoaves, newBread.Loaves);
+      int newQuantity = 10;
+      newBread.Quantity = newQuantity;
+      Assert.AreEqual(newQuantity, newBread.Quantity);
     }
 
     [TestMethod]

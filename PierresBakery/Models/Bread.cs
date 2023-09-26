@@ -5,18 +5,18 @@ namespace PierresBakery.Models
   public class Bread
   {
 
-    public int Loaves { get; set; }
+    public int Quantity { get; set; }
 
-    public Bread(int loaves)
+    public Bread(int quantity)
     {
-      Loaves = loaves;
+      Quantity = quantity;
     }
 
     public int GetBreadCost()
     {
       int loafCost = 5;
       int orderTotal = 0;
-      int numberOfLoaves = Loaves;
+      int numberOfLoaves = Quantity;
       for (int i = 1; i <= numberOfLoaves; i++)
       {
         if (i % 3 == 0)
