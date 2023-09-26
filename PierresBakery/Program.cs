@@ -11,8 +11,10 @@ namespace PierresBakery
       Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
       Console.WriteLine("Welcome to Pierre's Bakery, home to the best bread and pastries in town!");
       Console.WriteLine("What can we do for you today?");
-      Console.WriteLine("A single loaf of bread costs $5, and every 3rd loaf is free! For example, two loaves of bread would cost $10, three loaves would cost $10, and so on.");
-      Console.WriteLine("A single pastry costs $2, and every 4th pastry is free! For example, two pastries would cost $4, four pastries would cost $6, and so on.");
+      Console.WriteLine("A single loaf of bread costs $5, and a single pastry costs $2.");
+      Console.WriteLine("We also offer the following deals:");
+      Console.WriteLine("For every 2 loaves of bread you buy, the third loaf is free! For example, two loaves costs $10, three loaves costs $10, four loaves costs $15, and so on...");
+      Console.WriteLine("For every 3 pastries you buy, the fourth pastry is free! For example, two pastries costs $4, three pastries costs $6, four pastries costs $6, and so on...");
       Console.WriteLine("Please enter how many loaves of bread you would like to order:");
       string breadLoaves = Console.ReadLine();
       Console.WriteLine("Please enter how many pastries you would like to order:");
@@ -23,7 +25,15 @@ namespace PierresBakery
         int pastryQuantity = int.Parse(pastries);
         Bread bread = new Bread(breadQuantity);
         Pastry pastry = new Pastry(pastryQuantity);
-        ConfirmOrEditOrder(bread, pastry);
+        if (breadQuantity == 0 && pastryQuantity == 0)
+        {
+          Console.WriteLine("An empty order will not be accepted! To place an order, please order at least one loaf of bread or pastry.");
+          Main();
+        }
+        else
+        {
+          ConfirmOrEditOrder(bread, pastry);
+        }
       }
       catch
       {
@@ -36,8 +46,10 @@ namespace PierresBakery
     static void ConfirmOrEditOrder(Bread bread, Pastry pastry)
     {
       Console.WriteLine("Please confirm that your order is correct:");
+      Console.WriteLine("------------------------------------------------------");
       Console.WriteLine($"Bread: {bread.Quantity}");
-      Console.WriteLine($"Pastry: {pastry.Quantity}");
+      Console.WriteLine($"Pastries: {pastry.Quantity}");
+      Console.WriteLine("------------------------------------------------------");
       Console.WriteLine("Is that correct? Enter 'yes' to continue, or 'no' to re-enter the amount.");
       string userInput = Console.ReadLine();
       if (userInput == "yes" || userInput == "Yes")
@@ -46,7 +58,7 @@ namespace PierresBakery
       }
       else
       {
-        Console.WriteLine("Please re-enter the amount of loaves and pastries that you would like to order:");
+        Console.WriteLine("Please re-enter your order.");
         Console.WriteLine("Please enter the amount of loaves you would like to order:");
         string userBreadOrder = Console.ReadLine();
         Console.WriteLine("Please enter the amount of pastries you would like to order:");
