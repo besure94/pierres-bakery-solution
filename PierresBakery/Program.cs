@@ -17,11 +17,20 @@ namespace PierresBakery
       string breadLoaves = Console.ReadLine();
       Console.WriteLine("Please enter how many pastries you would like to order:");
       string pastries = Console.ReadLine();
-      int breadQuantity = int.Parse(breadLoaves);
-      int pastryQuantity = int.Parse(pastries);
-      Bread bread = new Bread(breadQuantity);
-      Pastry pastry = new Pastry(pastryQuantity);
-      ConfirmOrEditOrder(bread, pastry);
+      try
+      {
+        int breadQuantity = int.Parse(breadLoaves);
+        int pastryQuantity = int.Parse(pastries);
+        Bread bread = new Bread(breadQuantity);
+        Pastry pastry = new Pastry(pastryQuantity);
+        ConfirmOrEditOrder(bread, pastry);
+      }
+      catch
+      {
+        Console.WriteLine("ERROR: Please only enter numbers! Symbols and alphabetic characters will not be accepted.");
+        Console.WriteLine("Please place your order again...");
+        Main();
+      }
     }
 
     static void ConfirmOrEditOrder(Bread bread, Pastry pastry)
