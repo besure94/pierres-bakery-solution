@@ -30,5 +30,6 @@ namespace PierresBakery.Models
       }
       return orderTotal;
     }
+
   }
 }
