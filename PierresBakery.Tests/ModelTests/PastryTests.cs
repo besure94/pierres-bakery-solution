@@ -17,7 +17,7 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void Pastry_ReturnsNumberOfPastries_Int()
+    public void Pastry_ReturnsQuantityOfPastries_Int()
     {
       Pastry newPastry = new Pastry(4);
       int result = newPastry.Quantity;
@@ -25,7 +25,7 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void Pastry_SetsValueOfPastries_Int()
+    public void Pastry_SetsQuantityOfPastries_Int()
     {
       Pastry newPastry = new Pastry(4);
       int newQuantity = 8;
@@ -36,9 +36,9 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void GetPastryCost_ReturnsPastryCostForOrder_Int()
     {
-      Pastry numberOfPastries = new Pastry(400);
+      Pastry numberOfPastries = new Pastry(8);
       int orderTotal = numberOfPastries.GetPastryCost();
-      Assert.AreEqual(600, orderTotal);
+      Assert.AreEqual(12, orderTotal);
     }
   }
 }

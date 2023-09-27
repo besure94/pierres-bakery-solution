@@ -17,7 +17,7 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void Bread_ReturnsLoaves_Int()
+    public void Bread_ReturnsQuantityOfLoaves_Int()
     {
       Bread newBread = new Bread(3);
       int result = newBread.Quantity;
@@ -25,7 +25,7 @@ namespace PierresBakery.Tests
     }
 
     [TestMethod]
-    public void Bread_SetsValueOfLoaves_Void()
+    public void Bread_SetsQuantityOfLoaves_Void()
     {
       Bread newBread = new Bread(3);
       int newQuantity = 10;
@@ -36,9 +36,9 @@ namespace PierresBakery.Tests
     [TestMethod]
     public void GetBreadCost_ReturnsBreadCostForOrder_Int()
     {
-      Bread numberOfLoaves = new Bread(900);
+      Bread numberOfLoaves = new Bread(7);
       int orderTotal = numberOfLoaves.GetBreadCost();
-      Assert.AreEqual(3000, orderTotal);
+      Assert.AreEqual(25, orderTotal);
     }
   }
 }
