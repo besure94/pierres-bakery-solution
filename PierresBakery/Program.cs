@@ -77,14 +77,18 @@ namespace PierresBakery
       Console.WriteLine("------------------------------------------------------");
       Console.WriteLine("The cost of your order is: " + "$" + totalOrderCost);
       Console.WriteLine("------------------------------------------------------");
-      Console.WriteLine("Would you like to place another order (new)?");
-      Console.WriteLine("If not, you can enter 'done' to exit this app.");
+      Console.WriteLine("Would you like to place another order? Please enter 'new'.");
+      Console.WriteLine("You can also enter 'done' or any other key to exit this app.");
       string userResponse = Console.ReadLine();
       if (userResponse == "new" || userResponse == "New")
       {
         Main();
       }
       else if (userResponse == "done" || userResponse == "Done")
+      {
+        Console.WriteLine("Thank you! Please come again!");
+      }
+      else
       {
         Console.WriteLine("Thank you! Please come again!");
       }
