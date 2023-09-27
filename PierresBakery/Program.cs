@@ -8,8 +8,9 @@ namespace PierresBakery
   {
     static void Main()
     {
-      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
       Console.WriteLine("Welcome to Pierre's Bakery, home to the best bread and pastries in town!");
+      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
       Console.WriteLine("What can we do for you today?");
       Console.WriteLine("A single loaf of bread costs $5, and a single pastry costs $2.");
       Console.WriteLine("We also offer the following deals:");
@@ -83,10 +84,6 @@ namespace PierresBakery
       if (userResponse == "new" || userResponse == "New")
       {
         Main();
-      }
-      else if (userResponse == "done" || userResponse == "Done")
-      {
-        Console.WriteLine("Thank you! Please come again!");
       }
       else
       {
